@@ -1,0 +1,3 @@
+SELECT * FROM db_name.wp_options where option_name="active_plugins";
+
+then edit option_value
