@@ -1,0 +1,25 @@
+1. Media Settings in WP dashboard
+set all Image sizes to 0
+
+---
+
+2. Add this code to function.php in your theme.
+
+add_filter( 'intermediate_image_sizes_advanced', 'prefix_remove_default_images' );
+// This will remove the default image sizes and the medium_large size. 
+function prefix_remove_default_images( $sizes ) {
+ unset( $sizes['small']); // 150px
+ unset( $sizes['medium']); // 300px
+ unset( $sizes['medium_large']); // 768px
+ unset( $sizes['large']); // 1024px
+ return $sizes;
+}
+
+// completely disable image size threshold scaling
+add_filter( 'big_image_size_threshold', '__return_false' );
+
+
+ref:
+https://quadlayers.com/remove-wordpress-default-image-sizes/
+https://www.wpbeginner.com/wp-tutorials/how-to-prevent-wordpress-from-generating-image-sizes/
+https://wpmudev.com/blog/wordpress-image-sizes/
