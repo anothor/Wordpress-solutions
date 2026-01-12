@@ -1,3 +1,4 @@
+// add in to footer file
 <?php if (is_front_page() || get_page_template_slug() == 'template-home-page.php'){ ?>
 	<div id="popup-banner" style="position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;padding:15px;overflow-x:hidden;overflow-y:auto;background-color:rgb(0 0 0 / .8);display:none;justify-content: center;align-items: center;">
 		<div class="popup-content" style="width: fit-content;max-width:550px;border-radius:16px;position:relative;margin:0 auto;padding:20px;background-color:#000;">
